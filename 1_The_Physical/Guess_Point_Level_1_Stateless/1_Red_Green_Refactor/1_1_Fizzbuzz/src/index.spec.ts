@@ -21,4 +21,8 @@ describe("fizzbuzz", () => {
         expect(fizzbuzz(6)).toEqual('Fizz');
     } )
 
+    it('returns Buzz for multiples of 5',() => {
+        expect(fizzbuzz(10)).toEqual('Buzz');
+    })
+
 });
