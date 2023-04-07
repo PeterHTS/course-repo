@@ -33,12 +33,23 @@ describe("fizzbuzz", () => {
         expect(fizzbuzz(2)).toEqual('2');
     })
 
-    it('returns string "Out of 0-100 range" for 1',() => {
-        expect(fizzbuzz(101)).toEqual('Out of 0-100 range');
-    })
+    it('should not throw an error if the value is within the valid range', () => {
+        expect(() => fizzbuzz(50)).not.toThrow();
+    });
+    
+    it('should throw a RangeError if the value is less than 0', () => {
+        expect(() => fizzbuzz(-1)).toThrow(RangeError);
+        expect(() => fizzbuzz(-1)).toThrow('Value must be between 0 and 100, inclusive.');
+    });
 
-    it('returns string "Out of 0-100 range" for 1',() => {
-        expect(fizzbuzz(150)).toEqual('Out of 0-100 range');
-    })
+    test('should throw a RangeError if the value is greater than 100', () => {
+        expect(() => fizzbuzz(101)).toThrow(RangeError);
+        expect(() => fizzbuzz(101)).toThrow('Value must be between 0 and 100, inclusive.');
+    });
+
+    test('should throw a RangeError if the value is greater than 100 even if its multiple 3 and 5', () => {
+        expect(() => fizzbuzz(150)).toThrow(RangeError);
+        expect(() => fizzbuzz(150)).toThrow('Value must be between 0 and 100, inclusive.');
+    });
 
 });

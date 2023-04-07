@@ -1,6 +1,7 @@
 export function fizzbuzz(number: number) {
 
-    if (isOutOfZeroToHundredRange(number)) return "Out of 0-100 range";
+    if (isOutOfZeroToHundredRange(number)) 
+        throw new RangeError('Value must be between 0 and 100, inclusive.');
     if ((number%3 === 0) && (number%5 === 0)) return 'FizzBuzz';
     if (number%3 === 0) return 'Fizz';
     if (number%5 === 0) return 'Buzz';
