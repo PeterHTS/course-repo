@@ -37,4 +37,8 @@ describe("fizzbuzz", () => {
         expect(fizzbuzz(101)).toEqual('Out of 0-100 range');
     })
 
+    it('returns string "Out of 0-100 range" for 1',() => {
+        expect(fizzbuzz(150)).toEqual('Out of 0-100 range');
+    })
+
 });
