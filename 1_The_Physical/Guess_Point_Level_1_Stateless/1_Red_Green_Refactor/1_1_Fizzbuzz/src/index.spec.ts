@@ -13,7 +13,7 @@ describe("fizzbuzz", () => {
         expect(fizzbuzz(5)).toEqual('Buzz');
     })
 
-    it('returns string 1 for 1',() => {
+    it('returns string "1" for 1',() => {
         expect(fizzbuzz(1)).toEqual('1');
     })
 
@@ -23,6 +23,10 @@ describe("fizzbuzz", () => {
 
     it('returns Buzz for multiples of 5',() => {
         expect(fizzbuzz(10)).toEqual('Buzz');
+    })
+
+    it('returns string FizzBuzz for multiples of 3 and 5',() => {
+        expect(fizzbuzz(15)).toEqual('FizzBuzz');
     })
 
 });
