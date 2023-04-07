@@ -29,4 +29,8 @@ describe("fizzbuzz", () => {
         expect(fizzbuzz(15)).toEqual('FizzBuzz');
     })
 
+    it('returns string "2" for 1',() => {
+        expect(fizzbuzz(2)).toEqual('2');
+    })
+
 });
