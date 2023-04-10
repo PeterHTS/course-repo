@@ -16,7 +16,9 @@ describe('palindrome checker', () => {
     it('should return true if input is wow', ()=> {
         expect(isPalindrome('wow')).toBe(true);
     })
-
-    
+ 
+    it('should return true if input is Mom', ()=> {
+        expect(isPalindrome('Mom')).toBe(true);
+    }) 
 })
 
