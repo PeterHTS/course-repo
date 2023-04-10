@@ -1,5 +1,7 @@
 export function isPalindrome(input: string):boolean {
-    return input.split('').every((char, i) => {
-        return char.toLowerCase() === input[input.length - i -1].toLowerCase();
+    const regExp = /[\W_]/g;
+    var cleanInput = input.toLowerCase().replace(regExp, '');
+    return cleanInput.split('').every((char, i) => {
+        return char === cleanInput[cleanInput.length - i -1];
     });
 }

@@ -20,5 +20,10 @@ describe('palindrome checker', () => {
     it('should return true if input is Mom', ()=> {
         expect(isPalindrome('Mom')).toBe(true);
     }) 
+
+    it('should return true if input is "Was It A Rat I Saw"', ()=> {
+        expect(isPalindrome('Was It A Rat I Saw')).toBe(true);
+    })
+
 })
 
