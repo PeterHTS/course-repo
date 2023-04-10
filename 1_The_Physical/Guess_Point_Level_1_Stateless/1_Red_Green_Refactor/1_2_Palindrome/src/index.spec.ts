@@ -12,5 +12,9 @@ describe('palindrome checker', () => {
     it('should return false if the input is bill', ()=> {
         expect(isPalindrome('bill')).toBe(false);
     })
+
+    it('should return true if input is wow', ()=> {
+        expect(isPalindrome('wow')).toBe(true);
+    })
 })
 
