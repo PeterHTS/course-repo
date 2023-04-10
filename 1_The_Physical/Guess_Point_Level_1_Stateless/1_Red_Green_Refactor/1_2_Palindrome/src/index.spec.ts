@@ -25,5 +25,17 @@ describe('palindrome checker', () => {
         expect(isPalindrome('Was It A Rat I Saw')).toBe(true);
     })
 
+    it('should return true if input is "Never Odd or Even"', ()=> {
+        expect(isPalindrome('Never Odd or Even')).toBe(true);
+    })
+
+    it('should return true if input is "Step on no pets"', ()=> {
+        expect(isPalindrome('Step on no pets')).toBe(true);
+    })
+
+    it('should return true if input is "red rum, sir, is murder"', ()=> {
+        expect(isPalindrome('red rum, sir, is murder')).toBe(true);
+    })
+
 })
 
